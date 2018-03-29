@@ -1,16 +1,20 @@
 //Twitter
 var Twitter = require("twitter");
 
-client.post("statuses/update", { status: "" }, function(
-  error,
-  tweet,
-  response
-) {
+client.get("favorites/list", function(error, tweet, response) {
   if (error) throw error;
   console.log(tweet);
   console.log(response);
 });
 
+//Search Params
+
+var params = {
+  q: "nodejs",
+  count: 20,
+  result_type: "recent",
+  lang: "en",
+};
 //Spotify
 var spotify = require("spotify");
 

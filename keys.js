@@ -1,3 +1,6 @@
+var client = new Twitter(keys.twitter);
+var spotify = new spotify(keys.spotify);
+
 console.log("this is loaded");
 
 exports.twitter = {
