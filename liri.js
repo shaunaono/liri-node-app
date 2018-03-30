@@ -1,4 +1,4 @@
-//BankJS, ReadFile, OMDB_Request, 
+//BankJS, ReadFile, OMDB_Request, Arguments
 
 var keys = require('./keys.js');
 var request = require('request');
@@ -62,7 +62,7 @@ client.get('statuses/user_timeline', params, function(error, tweet, response) {
 //Spotify
 function getSong() {
     console.log("Spotify!");
-var spotify = newSpotify(keys.spotify);
+var spotify = new Spotify(keys.spotify);
 };
 spotify.search(
   { type: 'artist OR album OR track', query: 'My search query' },
