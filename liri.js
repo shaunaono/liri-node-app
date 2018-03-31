@@ -1,4 +1,5 @@
 //BankJS, ReadFile, OMDB_Request, Arguments
+require('dotenv').config()
 
 var keys = require('./keys.js');
 var request = require('request');
@@ -117,10 +118,5 @@ function getReadMe() {
         for (var i = 0; i < output.length; i++) {
             console.log(output[i]);
         }
-
+    }
     });
-
-
-
-
-//require('dotenv').config();
