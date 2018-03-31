@@ -1,5 +1,5 @@
 //BankJS, ReadFile, OMDB_Request, Arguments
-require('dotenv').config()
+require('dotenv').config();
 
 var keys = require('./keys.js');
 var request = require('request');
@@ -46,7 +46,7 @@ var params = {
   screen_name: 'GitMusic2018',
   count: 20,
   result_type: 'recent',
-  lang: 'en',
+  lang: 'en'
 };
 client.get('statuses/user_timeline', params, function(error, tweet, response) {
   if (!error){
@@ -105,18 +105,19 @@ request(queryUrl, function(err, res, body){
     }
 });
 
-//Readme and Random txt
+//Readme and random.txt
 function getReadMe() {
     fs.readFile("random.txt", "utf8", function(err, data) {
         if (err) {
             return console.log(err);
         }
-        console.log(data);
+        //console.log(data);
 
         var output = data.split().splice(",");
 
         for (var i = 0; i < output.length; i++) {
             console.log(output[i]);
         }
-    }
     });
+}
+
